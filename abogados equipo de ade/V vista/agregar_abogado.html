@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/abogado.css">
+    <link rel="stylesheet" href="../CSS/menu.css">
+    <title>Agregar Abogado</title>
+</head>
+<body>
+    <h1>Agregar Abogado</h1>
+
+    <ul>
+        <li><a href="index.html">Regresar</a></li>
+        <li><a href="agregar_cliente.html">Agregar Cliente</a></li>
+        <li><a href="agregar_fiscal.html">Agregar Fiscal</a></li>
+        <li><a href="agregar_caso.php">Agregar Caso</a></li>
+    </ul>
+    <form action="../C controlador/agregar_abogado.php" method="POST">
+        Nombre: <input type="text" name="nombre" required><br>
+        Apellido: <input type="text" name="apellido" required><br>
+        Dirección: <input type="text" name="direccion" required><br>
+        Teléfono: <input type="text" name="telefono" required><br>
+        Email: <input type="email" name="email" required><br>
+        <input type="submit" value="Agregar Abogado">
+    </form>
+    
+</body>

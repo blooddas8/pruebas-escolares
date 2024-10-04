@@ -1,0 +1,67 @@
+/* Table styling */
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    border-collapse: collapse; /* Elimina el espacio entre bordes de celdas */
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden; /* Redondea los bordes de la tabla */
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: center;
+    font-size: 1.1em;
+    border-bottom: 1px solid #dddddd;
+}
+
+table th {
+    background-color: #4e54c8;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+}
+
+table td {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+table tr:hover td {
+    background-color: #f1f1f1; /* Cambio de color al pasar el cursor por la fila */
+}
+
+/* Alternating row colors */
+table tr:nth-child(even) td {
+    background-color: #fafafa;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+    table tr {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #ddd;
+    }
+    table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        text-align: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}

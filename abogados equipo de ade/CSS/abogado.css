@@ -1,0 +1,109 @@
+/* Custom properties for easy theme management */
+:root {
+    --primary-color: #007BFF; /* Primary button color */
+    --secondary-color: #0056b3; /* Darker shade for button hover */
+    --background-color: #f8f9fa; /* Light background color */
+    --form-background: rgba(255, 255, 255, 0.95); /* Semi-transparent form background */
+    --text-color: #343a40; /* Dark text color */
+    --input-border: #ced4da; /* Input border color */
+    --input-focus-border: #007BFF; /* Input border color on focus */
+    --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow color */
+}
+
+/* Body styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    background: linear-gradient(135deg, #ff5f6d, #ffc371); /* Colorful gradient background */
+    color: var(--text-color); /* Text color */
+    min-height: 100vh; /* Full height */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add padding */
+    display: flex; /* Flexbox for centering content */
+    flex-direction: column; /* Column layout */
+    align-items: center; /* Center content */
+    justify-content: center; /* Center content vertically */
+}
+
+/* Heading styling */
+h1 {
+    text-align: center; /* Center align the heading */
+    margin: 20px 0; /* Margin for spacing */
+    color: #fff; /* Heading color */
+    font-size: 2.8em; /* Font size for the heading */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+}
+
+/* Form styling */
+form {
+    background: var(--form-background); /* Semi-transparent background for form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 30px var(--shadow-color); /* Shadow for a floating effect */
+    padding: 40px; /* Padding for the form */
+    max-width: 500px; /* Maximum width for the form */
+    width: 100%; /* Full width */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Column layout for inputs */
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in effect for the form */
+}
+
+/* Animation for form */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start invisible */
+        transform: translateY(-20px); /* Move up */
+    }
+    to {
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Move back to original position */
+    }
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+    padding: 12px; /* Padding inside input fields */
+    border: 1px solid var(--input-border); /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below inputs */
+    font-size: 1em; /* Font size for inputs */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border color */
+}
+
+/* Input focus effect */
+input:focus,
+textarea:focus {
+    border-color: var(--input-focus-border); /* Border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px var(--input-focus-border); /* Glow effect on focus */
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: var(--primary-color); /* Primary button color */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    padding: 15px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1.2em; /* Font size for the button */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+/* Button hover effect */
+input[type="submit"]:hover {
+    background-color: var(--secondary-color); /* Darker shade on hover */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 8px 15px var(--shadow-color); /* Enhanced shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    form {
+        padding: 25px; /* Reduce padding on smaller screens */
+    }
+    h1 {
+        font-size: 2.5em; /* Smaller font size for heading */
+    }
+}
